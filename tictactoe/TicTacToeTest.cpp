@@ -10,6 +10,7 @@ int main()
 	tic.start();
 	tic.move();
 	system("pause");
+	return 0;
 
 }
 

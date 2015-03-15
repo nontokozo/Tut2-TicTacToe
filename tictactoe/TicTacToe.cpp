@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-TicTacToe  ::TicTacToe(void)
+TicTacToe  ::TicTacToe()
 {
 	//initializing the board array
 	for (int i = 0; i <= 2; i++)
@@ -81,40 +81,7 @@ void TicTacToe::move()
 void TicTacToe::check_store(int x, int y)
 {
 	if (0 <= x <= 2 && 0 <= y <= 2)
-	{
-		switch (player)
-
-		{
-
-		case 1: board[x][y] = 'x'; // placing character to the board array
-
-			player1[0][counterA] = x;
-			player1[1][counterA] = y;
-			decide(player1);// calling a decide function to check whether the player won or not
-			counterA++;
-			player = 2; // turn for player2
-			isfull();
-			break;
-
-		case 2: board[x][y] = 'o';// placing character to the board array
-
-			player2[0][counterB] = x;
-			player2[1][counterB] = y;
-			decide(player2);// calling a decide function to check whether the player won or not
-			counterB++;
-			player = 1; // turn for player1
-			isfull();
-			break;
-
-		}// end switch statement
-
-
-	} // end if
-
-	else
-	{
-		throw invalid_argument("coordinates out of range"); //invalid coordinate2
-	}
+	
 }// end check and store function
 
 
